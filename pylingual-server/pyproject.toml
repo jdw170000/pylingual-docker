@@ -1,0 +1,15 @@
+[project]
+name = "pylingual-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.115.0",
+    "uvicorn>=0.30.0",
+    "python-multipart>=0.0.9",
+    "pylingual"
+]
+
+[tool.uv.sources]
+pylingual = { path = "../pylingual" }

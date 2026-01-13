@@ -1,0 +1,3 @@
+[submodule "pylingual"]
+	path = pylingual
+	url = https://github.com/syssec-utd/pylingual.git
