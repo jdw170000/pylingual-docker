@@ -7,9 +7,9 @@ We provide four image variants to balance between image size and pre-installed c
 | Variant | Base Python | Pre-installed Pythons | Purpose |
 | :--- | :--- | :--- | :--- |
 | `lite-cli` | 3.14 | 3.14 | Thin wrapper around PyLingual's CLI. |
-| `full-cli` | 3.14 | 3.6 - 3.14 | CLI tool with all Python versions pre-installed. |
+| `full-cli` | 3.14 | 3.6 - 3.14 | CLI tool with all supported Python versions pre-installed. |
 | `lite-server` | 3.14 | 3.14 | Lightweight REST API. |
-| `full-server` | 3.14 | 3.6 - 3.14 | REST API with all Python versions pre-installed. |
+| `full-server` | 3.14 | 3.6 - 3.14 | REST API with all supported Python versions pre-installed. |
 
 ## Building the Images
 
