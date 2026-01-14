@@ -8,26 +8,35 @@ We provide four image variants to balance between image size and pre-installed c
 | :--- | :--- | :--- | :--- |
 | `lite-cli` | 3.14 | 3.14 | Thin wrapper around PyLingual's CLI. |
 | `full-cli` | 3.14 | 3.6 - 3.14 | CLI tool with all supported Python versions pre-installed. |
-| `lite-server` | 3.14 | 3.14 | Lightweight REST API. |
-| `full-server` | 3.14 | 3.6 - 3.14 | REST API with all supported Python versions pre-installed. |
+| `lite-server` | 3.14 | 3.14 | Lightweight REST API. (Requires internet for first model download) |
+| `full-server` | 3.14 | 3.6 - 3.14 | REST API with all supported Python versions pre-installed and models pre-loaded for offline use. |
 
 ## Building the Images
 
 All images are built from the same `Dockerfile` using different targets.
 
+**Note:** The `full` images download several gigabytes of models during the build process.
+
 ```bash
 # Lite CLI
 docker build --target lite-cli -t pylingual:lite-cli .
 
-# Full CLI
+# Full CLI (Offline capable)
 docker build --target full-cli -t pylingual:full-cli .
 
 # Lite Server
 docker build --target lite-server -t pylingual:lite-server .
 
-# Full Server
+# Full Server (Offline capable)
 docker build --target full-server -t pylingual:full-server .
 ```
+
+### Build Requirements
+
+The build process uses `docker buildx` features (Mounts). Ensure you have a recent version of Docker.
+Intermediate build stages are used to keep the final image size optimized.
+
+## Using the CLI
 
 ## Using the CLI
 
